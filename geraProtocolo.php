@@ -1,12 +1,12 @@
 <?php
 class geraProtocolo{
 	public function buscaTodos(){
-		return $this->db->get("Voucher")->result_array();
+		return $this->mydb->get("Protocolo")->result_array();
 
 	}
-
-	public function selecionaVoucher($login){
-			$query = $this->db->query("SELECT Cod_voucher FROM voucher WHERE idUsuario = '1' order by idUsuario LIMIT 1");
+//teste
+	public function selecionaProtocolo($login){
+			$query = $this->mydb->query("SELECT Cod_voucher FROM voucher WHERE idUsuario = '1' order by idUsuario LIMIT 1");
   			$result = $query->result();
 			$resultado = $result[0]->Cod_voucher;
 
